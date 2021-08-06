@@ -1,13 +1,25 @@
 import { useEffect, useState } from "react"
 
-export const useChangeValue = (value) => {
-    const [start, setStart] = useState(value)
+export const useChangeValue = (initialValue) => {
+    const [start, setStart] = useState(initialValue)
 
     function handleChange (e){
         setStart(e.target.value)
     }
 
     return [start, handleChange]
+}
+
+export const useSubmitValue = (initialValue) => {
+    const [formValue, setFormValue] = useChangeValue(initialValue)
+    const [value, setValue] = useState(initialValue)
+
+    function handleClick (e){
+        e.preventDefault();
+        setValue(formValue)
+    }
+
+    return [value, handleClick, formValue, setFormValue]
 }
 
 export const useArray = (number) => {
