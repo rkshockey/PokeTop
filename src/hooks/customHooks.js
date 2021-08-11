@@ -79,5 +79,5 @@ export const useVariants = (number) => {
         }
     }
 
-    return [variants, setVariants]
+    return [variants, setVariants, initialValue]
 }
