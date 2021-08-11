@@ -16,7 +16,7 @@ function PokeCards () {
 
     return (
         <div className='pokepage'>
-            {/* {selectedPoke ? <SelectedPokemon pokemon={selectedPoke} /> : null} */}
+            {selectedPoke ? <SelectedPokemon pokemon={selectedPoke} /> : null}
             <div className='pokecards'>
                 {pokemon.map(poke => <PokeCard url={poke.url} name={poke.name} key={poke.name} setPoke={setSelectedPoke} />)}
             </div>

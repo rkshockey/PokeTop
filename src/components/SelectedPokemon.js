@@ -22,7 +22,7 @@ function SelectedPokemon (props){
 
     return (
         <div className='selected-pokemon'>
-            <h2>{pokemon.species.name}</h2>
+            <h2>{pokemon.name}</h2>
         </div>
     )
 }
