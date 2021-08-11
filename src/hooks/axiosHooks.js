@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export const useAxiosState = (url, initial) => {
-    const [array, setArray] = useState([])
+    const [array, setArray] = useState(initial)
 
     useEffect(() =>{
         axios.get(url)

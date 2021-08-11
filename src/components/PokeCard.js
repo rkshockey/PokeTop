@@ -14,7 +14,11 @@ function PokeCard (props) {
 
     function handleClick (e) {
         e.preventDefault();
-        // setPoke(pokemon)
+        setPoke(pokemon)
+    }
+
+    if (pokemon === initialPoke){
+        return <div>...Loading</div>
     }
 
     return (
