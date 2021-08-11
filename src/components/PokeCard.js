@@ -2,10 +2,12 @@ import React from 'react'
 import { useAxiosState } from '../hooks/axiosHooks'
 
 const initialPoke = {
-    sprites: {
-        front_default: null
-    },
-    types: null
+    details: {
+        sprites: {
+            front_default: null
+        },
+        types: null
+    }
 }
 
 function PokeCard (props) {
