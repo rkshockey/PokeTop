@@ -19,6 +19,36 @@ const cute = 'Cute'
 
 const attackdex = [
     {
+        name: 'Dragon Breath',
+        type: dragon,
+        class: spec,
+        damage: '1d12',
+        energy: 2,
+        hq: 0,
+        range: medium,
+        aoe: "Hits all Pokemon in a cone.",
+        contestType: cool,
+        appeal: 2,
+        effect: 'Badly startles the last Pokemon to act before the user.',
+        description: "The user exhales a mighty just that inflict damage. It also causes paralysis on a 15 or better.",
+        details: "Increases chance of misbehavior by 20%"
+    },
+    {
+        name: 'Ember',
+        type: fire,
+        class: spec,
+        damage: '1d8',
+        energy: 2,
+        hq: 0,
+        range: medium,
+        aoe: single,
+        contestType: cute,
+        appeal: 4,
+        effect: 'Quite an appealing move.',
+        description: "The target is attacked with small flames. This leaves the target with a burn at 19 or better.",
+        details: null
+    },
+    {
         name: 'Growl',
         type: normal,
         class: boost,
@@ -76,7 +106,7 @@ const attackdex = [
         appeal: 3,
         effect: 'Brings down the energy of other Pokemon that follow',
         description: "The user scatters a cloud of poisonous dust that poisons the target",
-        details: "In contest, lowers adversaries' appeals by four total points if they perform after the user."
+        details: "In contest, lowers adversaries' appeal round by three total points if they perform after the user."
     },
     {
         name: 'Razor Leaf',
@@ -94,6 +124,21 @@ const attackdex = [
         details: "Crits have a +1 chance."
     },
     {
+        name: 'Scratch',
+        type: normal,
+        class: phys,
+        damage: '1d8',
+        energy: 1,
+        hq: 0,
+        range: close,
+        aoe: single,
+        contestType: tough,
+        appeal: 4,
+        effect: 'Quite an appealing move.',
+        description: "Hard, pointed, sharp claws rake the target to inflict damage.",
+        details: null
+    },
+    {
         name: 'Sleep Powder',
         type: grass,
         class: boost,
@@ -104,9 +149,24 @@ const attackdex = [
         aoe: 'Affects all Pokemon in range.',
         contestType: clever,
         appeal: 1,
-        effect: 'Startles all the Pokemon that perform after the user',
+        effect: 'Startles all the Pokemon that perform before the user.',
         description: "The user scatters a big cloud of sleep-inducing dust around the target.",
         details: "In contest, raises the chance of rival misbehavior by 10%."
+    },
+    {
+        name: 'Smokescreen',
+        type: normal,
+        class: boost,
+        damage: '-',
+        energy: 2,
+        hq: 0,
+        range: medium,
+        aoe: "Affects all rival Pokemon in range.",
+        contestType: clever,
+        appeal: 2,
+        effect: 'Prevents the user from being startled one time this turn.',
+        description: "The user releases an obscuring cloud of smoke or ink. It reduces the target's accuracy.",
+        details: "Lowers accuracy by one stage."
     },
     {
         name: 'Tackle',

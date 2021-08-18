@@ -1,16 +1,18 @@
 import {normal, fire, water, electr, grass, ice, fight, poison, ground, flying, psychic, bug, rock, ghost, dragon, dark, steel, fairy} from './typechart'
 
+import {close, medium, far} from './attackdex'
+
 export const human = {
     species: 'Human',
-    index: 0,
+    index: 000,
     picture: {normal: null, shiny: null},
     type: [fight],
     height: null,
     weight: null,
-    sizeClass: null,
+    metricHeight: null,
     catchRate: null,
     evolvesAt: null,
-    evolvesTp: null,
+    evolvesTo: null,
     baseStats: {
         hp: 100,
         att: 101,
@@ -20,7 +22,6 @@ export const human = {
         speed: 50
     },
     biomes: null,
-    ranges: null,
     abilities: [],
     moveList: [],
 }
@@ -28,7 +29,7 @@ export const human = {
 const pokedex = [
     {
         species: 'Bulbasaur',
-        index: 1,
+        index: 001,
         picture: {
             normal: 'https://www.serebii.net/swordshield/pokemon/001.png', 
             shiny: 'https://www.serebii.net/Shiny/SWSH/001.png'
@@ -36,7 +37,7 @@ const pokedex = [
         type: [grass, poison],
         height: "2'04",
         weight: "15.2lbs",
-        sizeClass: 2,
+        metricHeight: 0.7,
         catchRate: 45,
         evolvesAt: 16,
         evolvesTo: 'Ivysaur',
@@ -49,7 +50,6 @@ const pokedex = [
             speed: 50
         },
         biomes: null,
-        ranges: null,
         abilities: [
             {
                 name: 'Overgrow',
@@ -94,6 +94,62 @@ const pokedex = [
                 level: 15
             }
         ]
+    },
+    {
+        species: 'Charmander',
+        index: 004,
+        picture: {
+            normal: 'https://www.serebii.net/swordshield/pokemon/004.png',
+            shiny: 'https://www.serebii.net/Shiny/SWSH/004.png'
+        },
+        type: [fire],
+        height: "2'00",
+        weight: '18.7lbs',
+        metricHeight: 0.6,
+        catchRate: 45,
+        evolvesAt: 16,
+        evolvesTo: 'Charmeleon',
+        baseStats: {
+            hp: 39,
+            att: 52,
+            def: 43,
+            spAt: 60,
+            spDef: 50,
+            speed: 65
+        },
+        biomes: null,
+        abilities: [
+            {
+                name: 'Blaze',
+                hidden: false
+            },
+            {
+                name: 'Solar Power',
+                hidden: true
+            }
+        ],
+        moveList: [
+            {
+                name: 'Scratch',
+                level: 1
+            },
+            {
+                name: 'Growl',
+                level: 1
+            },
+            {
+                name: 'Ember',
+                level: 4
+            },
+            {
+                name: 'Smokescreen',
+                level: 8
+            },
+            {
+                name: 'Dragon Breath',
+                level: 12
+            }
+        ],
     }
 ]
 
