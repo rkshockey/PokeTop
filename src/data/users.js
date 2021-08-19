@@ -3,6 +3,14 @@ export const player = 'player'
 
 const users = [
     {
+        id: 0,
+        role: null,
+        name: null,
+        username: '--Select User--', 
+        players: [],
+        character: null
+    },
+    {
         id: 1,
         role: master,
         name: 'Romy',

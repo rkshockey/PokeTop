@@ -1,11 +1,9 @@
 import {normal, fire, water, electr, grass, ice, fight, poison, ground, flying, psychic, bug, rock, ghost, dragon, dark, steel, fairy} from './typechart'
 
-import {close, medium, far} from './attackdex'
-
 export const human = {
     species: 'Human',
-    index: 000,
-    picture: {normal: null, shiny: null},
+    index: 0,
+    picture: {normal: 'https://d.newsweek.com/en/full/1543337/pokemon-sword-shield-trainer-clothes.webp?w=790&f=8ccd3adbf5232ea6dd24802aab6023a3', shiny: null},
     type: [fight],
     height: null,
     weight: null,
@@ -13,6 +11,10 @@ export const human = {
     catchRate: null,
     evolvesAt: null,
     evolvesTo: null,
+    evolution: {
+        species: ['Human'],
+        complex: false
+    },
     baseStats: {
         hp: 100,
         att: 101,
@@ -29,7 +31,7 @@ export const human = {
 const pokedex = [
     {
         species: 'Bulbasaur',
-        index: 001,
+        index: 1,
         picture: {
             normal: 'https://www.serebii.net/swordshield/pokemon/001.png', 
             shiny: 'https://www.serebii.net/Shiny/SWSH/001.png'
@@ -41,6 +43,10 @@ const pokedex = [
         catchRate: 45,
         evolvesAt: 16,
         evolvesTo: 'Ivysaur',
+        evolution: {
+            species: ['Bulbasaur', 'Ivysaur', 'Venusaur'],
+            complex: false
+        },
         baseStats: {
             hp: 100,
             att: 101,
@@ -97,7 +103,7 @@ const pokedex = [
     },
     {
         species: 'Charmander',
-        index: 004,
+        index: 4,
         picture: {
             normal: 'https://www.serebii.net/swordshield/pokemon/004.png',
             shiny: 'https://www.serebii.net/Shiny/SWSH/004.png'
@@ -109,6 +115,10 @@ const pokedex = [
         catchRate: 45,
         evolvesAt: 16,
         evolvesTo: 'Charmeleon',
+        evolution: {
+            species: ['Charmander', 'Charmeleon', 'Charizard'],
+            complex: false
+        },
         baseStats: {
             hp: 39,
             att: 52,

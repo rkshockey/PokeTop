@@ -200,4 +200,4 @@ const attackdex = [
     }
 ]
 
-export const attackdex
+export default attackdex
