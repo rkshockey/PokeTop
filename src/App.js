@@ -1,6 +1,7 @@
 import HordesVariants from './components/HordesVariants';
 import Pokedex from './components/Pokedex';
 import Login from './components/Login';
+import PokedexPage from './components/PokedexPage';
 
 import './App.css';
 import { Link, Route, Switch } from 'react-router-dom'
@@ -25,6 +26,9 @@ function App(props) {
         </Route>
         <Route exact path='/pokedex'>
           <Pokedex />
+        </Route>
+        <Route path='/pokedex/:id'>
+          <PokedexPage />
         </Route>
       </Switch>
     </div>

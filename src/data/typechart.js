@@ -19,6 +19,162 @@ export const dark = "Dark"
 export const steel = "Steel"
 export const fairy = "Fairy"
 
+export const typeMatch = (typeArray) => {
+    const type = typeArray.map(item => typechart.find(e => e.name === item))
+    console.log(type)
+    if (type.length === 1){
+        return <div className='row'>
+            <div className='type-match'>
+                <p>Normal</p>
+                <p>{type[0].normal}</p>
+            </div>
+            <div className='type-match'>
+                <p>Fire</p>
+                <p>{type[0].fire}</p>
+            </div>
+            <div className='type-match'>
+                <p>Water</p>
+                <p>{type[0].water}</p>
+            </div>
+            <div className='type-match'>
+                <p>Electric</p>
+                <p>{type[0].electr}</p>
+            </div>
+            <div className='type-match'>
+                <p>Grass</p>
+                <p>{type[0].grass}</p>
+            </div>
+            <div className='type-match'>
+                <p>Ice</p>
+                <p>{type[0].ice}</p>
+            </div>
+            <div className='type-match'>
+                <p>Fight</p>
+                <p>{type[0].fight}</p>
+            </div>
+            <div className='type-match'>
+                <p>Poison</p>
+                <p>{type[0].poison}</p>
+            </div>
+            <div className='type-match'>
+                <p>Ground</p>
+                <p>{type[0].ground}</p>
+            </div>
+            <div className='type-match'>
+                <p>Flying</p>
+                <p>{type[0].flying}</p>
+            </div>
+            <div className='type-match'>
+                <p>Psychic</p>
+                <p>{type[0].psychic}</p>
+            </div>
+            <div className='type-match'>
+                <p>Bug</p>
+                <p>{type[0].bug}</p>
+            </div>
+            <div className='type-match'>
+                <p>Rock</p>
+                <p>{type[0].rock}</p>
+            </div>
+            <div className='type-match'>
+                <p>Ghost</p>
+                <p>{type[0].ghost}</p>
+            </div>
+            <div className='type-match'>
+                <p>Dragon</p>
+                <p>{type[0].dragon}</p>
+            </div>
+            <div className='type-match'>
+                <p>Dark</p>
+                <p>{type[0].dark}</p>
+            </div>
+            <div className='type-match'>
+                <p>Steel</p>
+                <p>{type[0].steel}</p>
+            </div>
+            <div className='type-match'>
+                <p>Fairy</p>
+                <p>{type[0].fairy}</p>
+            </div>
+        </div>
+    }else{
+        return <div className='row'>
+            <div className='type-match'>
+                <p>Normal</p>
+                <p>{type[0].normal * type[1].normal}</p>
+            </div>
+            <div className='type-match'>
+                <p>Fire</p>
+                <p>{type[0].fire * type[1].fire}</p>
+            </div>
+            <div className='type-match'>
+                <p>Water</p>
+                <p>{type[0].water * type[1].water}</p>
+            </div>
+            <div className='type-match'>
+                <p>Electric</p>
+                <p>{type[0].electr * type[1].electr}</p>
+            </div>
+            <div className='type-match'>
+                <p>Grass</p>
+                <p>{type[0].grass * type[1].grass}</p>
+            </div>
+            <div className='type-match'>
+                <p>Ice</p>
+                <p>{type[0].ice * type[1].ice}</p>
+            </div>
+            <div className='type-match'>
+                <p>Fight</p>
+                <p>{type[0].fight * type[1].fight}</p>
+            </div>
+            <div className='type-match'>
+                <p>Poison</p>
+                <p>{type[0].poison * type[1].poison}</p>
+            </div>
+            <div className='type-match'>
+                <p>Ground</p>
+                <p>{type[0].ground * type[1].ground}</p>
+            </div>
+            <div className='type-match'>
+                <p>Flying</p>
+                <p>{type[0].flying * type[1].flying}</p>
+            </div>
+            <div className='type-match'>
+                <p>Psychic</p>
+                <p>{type[0].psychic * type[1].psychic}</p>
+            </div>
+            <div className='type-match'>
+                <p>Bug</p>
+                <p>{type[0].bug * type[1].bug}</p>
+            </div>
+            <div className='type-match'>
+                <p>Rock</p>
+                <p>{type[0].rock * type[1].rock}</p>
+            </div>
+            <div className='type-match'>
+                <p>Ghost</p>
+                <p>{type[0].ghost * type[1].ghost}</p>
+            </div>
+            <div className='type-match'>
+                <p>Dragon</p>
+                <p>{type[0].dragon * type[1].dragon}</p>
+            </div>
+            <div className='type-match'>
+                <p>Dark</p>
+                <p>{type[0].dark * type[1].dark}</p>
+            </div>
+            <div className='type-match'>
+                <p>Steel</p>
+                <p>{type[0].steel * type[1].steel}</p>
+            </div>
+            <div className='type-match'>
+                <p>Fairy</p>
+                <p>{type[0].fairy * type[1].fairy}</p>
+            </div>
+        </div>
+    }
+}
+
 const base = {
     normal: 1,
     fire: 1,

@@ -8,11 +8,11 @@ function PokedexEntry (props){
 
     function evolution (){
         if (!poke.evolution.complex){
-            return poke.evolution.species.map(item => <p className={item === poke.species ? 'bold' : ''}>{item}</p>)
+            return poke.evolution.species.map(item => <p className={item === poke.species ? 'bold no-dec' : 'no-dec'}>{item}</p>)
         }
     }
 
-    return <Link to={url}>
+    return <Link classname='no-dec' to={url}>
         <div className='pokedex-entry'>
             <img src={poke.picture.normal} alt={poke.species}/>
             {evolution()}

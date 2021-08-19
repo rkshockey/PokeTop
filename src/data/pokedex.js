@@ -23,7 +23,10 @@ export const human = {
         spDef: 95,
         speed: 50
     },
+    pokedexEntry: "There is much debate about whether humans are, themselves, pokemon.",
+    eggGroup: 'none',
     biomes: null,
+    rarity: null,
     abilities: [],
     moveList: [],
 }
@@ -55,7 +58,10 @@ const pokedex = [
             spDef: 95,
             speed: 50
         },
+        pokedexEntry: "There is a plant seed on its back right from the day this Pokemon is born. The seed slowly grows larger.",
+        eggGroup: 'Monster, Grass',
         biomes: null,
+        rarity: null,
         abilities: [
             {
                 name: 'Overgrow',
@@ -127,7 +133,10 @@ const pokedex = [
             spDef: 50,
             speed: 65
         },
+        pokedexEntry: "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+        eggGroup: 'Monster, Dragon',
         biomes: null,
+        rarity: null,
         abilities: [
             {
                 name: 'Blaze',
