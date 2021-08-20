@@ -27,8 +27,8 @@ export const human = {
     eggGroup: 'none',
     biomes: null,
     rarity: null,
-    abilities: [],
-    moveList: [],
+    abilities: [{name: null, hidden: null}],
+    moveList: [{name: null, level: null}],
 }
 
 const pokedex = [

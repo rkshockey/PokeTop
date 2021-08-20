@@ -19,6 +19,21 @@ const cute = 'Cute'
 
 const attackdex = [
     {
+        name: null,
+        type: null,
+        class: null,
+        damage: null,
+        energy: null,
+        hq: null,
+        range: null,
+        aoe: null,
+        contestType: null,
+        appeal: null,
+        effect: null,
+        description: null,
+        details: null
+    },
+    {
         name: 'Dragon Breath',
         type: dragon,
         class: spec,

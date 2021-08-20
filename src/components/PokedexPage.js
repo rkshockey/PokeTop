@@ -3,14 +3,15 @@ import {connect} from 'react-redux'
 import { useParams } from 'react-router'
 
 import pokedex, {human} from '../data/pokedex'
-import { sizeClass } from '../equations'
-import { typeMatch } from '../data/typechart'
+import { sizeClass, ranges, movement } from '../equations'
+import { typeMatch, normal } from '../data/typechart'
+import { ability } from '../data/abilitydex'
 
 const initialPoke = {
     species: null,
     index: null,
     picture: {normal: null, shiny: null},
-    type: [null],
+    type: [normal],
     height: null,
     weight: null,
     metricHeight: null,
@@ -32,6 +33,7 @@ const initialPoke = {
     eggGroup: null,
     rarity: null,
     biomes: null,
+    abilities: [{name: null, hidden: null}]
 }
 
 function PokedexPage (props){
@@ -84,7 +86,9 @@ function PokedexPage (props){
                 {!pokemon.evolution.complex ? evolution(pokemon.evolution.species) : null}
             </div>
             {role === 'master' && <div className='section'>
-                <h4>Base Stats:</h4>
+                <div className='row'>
+                    <h4>Base Stats:</h4>
+                </div>
                 <div className='row'>
                     <p>HP: {pokemon.baseStats.hp}</p>
                     <p>Attack: {pokemon.baseStats.att}</p>
@@ -94,16 +98,24 @@ function PokedexPage (props){
                     <p>Speed: {pokemon.baseStats.speed}</p>
                 </div>
             </div>}
-            {role === 'master' && typeMatch(pokemon.type)}
+            {role === 'master' && <div><div className='row'><h4>Type Matchup</h4></div> {typeMatch(pokemon.type)}</div>}
             <div className='row'>
                 <p>Catch Rate: {pokemon.catchRate}</p>
                 <p>Biomes: {pokemon.biomes}</p>
                 <p>Rarity: {pokemon.rarity}</p>
             </div>
+            {role === 'master' && <div className='row'>
+                {ranges(pokemon.metricHeight)}
+                {movement(pokemon.baseStats.speed, 0)}
+            </div>}
+            <div className='row'>
+                {pokemon.abilities.map(item => ability(item))}
+            </div>
             <div className='row'>
                 <p>{pokemon.pokedexEntry}</p>
             </div>
         </div>
+        
     </div>
 }
 

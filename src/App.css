@@ -37,3 +37,20 @@
 .bold {
   font-weight: bold;
 }
+
+/*Pokedex Pages*/
+
+.pokedex-top {
+  margin: 2%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid black;
+  flex-wrap: wrap;
+}
+
+.row div {
+  margin: 2%;
+}
