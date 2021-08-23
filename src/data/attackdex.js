@@ -19,7 +19,7 @@ const cute = 'Cute'
 
 const attackdex = [
     {
-        name: null,
+        name: 'blank',
         type: null,
         class: null,
         damage: null,

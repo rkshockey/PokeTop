@@ -1,5 +1,41 @@
 import {normal, fire, water, electr, grass, ice, fight, poison, ground, flying, psychic, bug, rock, ghost, dragon, dark, steel, fairy} from './typechart'
 
+export const fast = 'fast'
+export const medfast = 'medium fast'
+export const medslow = 'medium slow'
+export const slow = 'slow'
+
+export const initialPoke = {
+    species: null,
+    index: null,
+    picture: {normal: null, shiny: null},
+    type: [normal],
+    height: null,
+    weight: null,
+    metricHeight: null,
+    catchRate: null,
+    evolvesAt: null,
+    evolvesTo: null,
+    evolution: {
+        species: [null],
+        complex: false
+    },
+    baseStats: {
+        hp: null,
+        att: null,
+        def: null,
+        spAtt: null,
+        spDef: null,
+        speed: null
+    },
+    eggGroup: null,
+    levelSpeed: null,
+    rarity: null,
+    biomes: null,
+    abilities: [{name: null, hidden: null}],
+    moveList: [{name: 'blank', level: null}],
+}
+
 export const human = {
     species: 'Human',
     index: 0,
@@ -25,6 +61,7 @@ export const human = {
     },
     pokedexEntry: "There is much debate about whether humans are, themselves, pokemon.",
     eggGroup: 'none',
+    levelSpeed: slow,
     biomes: null,
     rarity: null,
     abilities: [{name: null, hidden: null}],
@@ -60,6 +97,7 @@ const pokedex = [
         },
         pokedexEntry: "There is a plant seed on its back right from the day this Pokemon is born. The seed slowly grows larger.",
         eggGroup: 'Monster, Grass',
+        levelSpeed: medslow,
         biomes: null,
         rarity: null,
         abilities: [
@@ -135,6 +173,7 @@ const pokedex = [
         },
         pokedexEntry: "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
         eggGroup: 'Monster, Dragon',
+        levelSpeed: medslow,
         biomes: null,
         rarity: null,
         abilities: [

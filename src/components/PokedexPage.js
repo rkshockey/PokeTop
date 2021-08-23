@@ -2,43 +2,18 @@ import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
 import { useParams } from 'react-router'
 
-import pokedex, {human} from '../data/pokedex'
+import pokedex, {human, initialPoke} from '../data/pokedex'
 import { sizeClass, ranges, movement } from '../equations'
 import { typeMatch, normal } from '../data/typechart'
 import { ability } from '../data/abilitydex'
 
-const initialPoke = {
-    species: null,
-    index: null,
-    picture: {normal: null, shiny: null},
-    type: [normal],
-    height: null,
-    weight: null,
-    metricHeight: null,
-    catchRate: null,
-    evolvesAt: null,
-    evolvesTo: null,
-    evolution: {
-        species: [null],
-        complex: false
-    },
-    baseStats: {
-        hp: null,
-        att: null,
-        def: null,
-        spAtt: null,
-        spDef: null,
-        speed: null
-    },
-    eggGroup: null,
-    rarity: null,
-    biomes: null,
-    abilities: [{name: null, hidden: null}]
-}
+import Attacks from './Attacks'
+import ContestForm from './ContestForm'
 
 function PokedexPage (props){
     const {id} = useParams();
     const [pokemon, setPokemon] = useState(initialPoke);
+    const [view, setView] = useState('battle')
     const {role} = props
 
     useEffect(() => {
@@ -107,6 +82,10 @@ function PokedexPage (props){
             {role === 'master' && <div className='row'>
                 {ranges(pokemon.metricHeight)}
                 {movement(pokemon.baseStats.speed, 0)}
+                <div>
+                    <h4>Level Speed</h4>
+                    <p>{pokemon.levelSpeed}</p>
+                </div>
             </div>}
             <div className='row'>
                 {pokemon.abilities.map(item => ability(item))}
@@ -114,6 +93,13 @@ function PokedexPage (props){
             <div className='row'>
                 <p>{pokemon.pokedexEntry}</p>
             </div>
+            {role === 'master' && <div>
+                <h4>Attack List</h4>
+                <ContestForm view={view} setView={setView}/>
+                <div className='attacks'>
+                    {pokemon.moveList.map(item => <Attacks pokedex={true} move={item} role={role} view={view}/>)}
+                </div>
+            </div>}
         </div>
         
     </div>
