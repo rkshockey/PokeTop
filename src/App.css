@@ -4,6 +4,8 @@
 
 .App {
   text-align: center;
+  background: #CCD7E1;
+  min-height: 100vh;
 }
 
 /*Pokedex*/
@@ -53,4 +55,43 @@
 
 .row div {
   margin: 2%;
+}
+
+.attacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.attack {
+  width: 400px;
+  border: 3px solid black;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 5%;
+}
+
+.subattack {
+  border: 1px solid black;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini, .maxi {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mini {
+  width: 35%;
+}
+
+.maxi {
+  width: 55%;
+}
+
+.bottom-div {
+  padding-bottom: 30%;
 }

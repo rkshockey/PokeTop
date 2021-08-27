@@ -22,7 +22,7 @@ function Attacks (props) {
             <div className='maxi'>
                 <p>{attack.damage}</p>
                 <p>{attack.hq}</p>
-                <p>{attack.energy}{attack.energy !== 0 && 'e'}</p>
+                <p>{attack.energy}e</p>
             </div>
         </div>
         {view === 'battle' && <div className='subattack'>

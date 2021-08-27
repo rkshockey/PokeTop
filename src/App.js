@@ -3,11 +3,21 @@ import Pokedex from './components/Pokedex';
 import Login from './components/Login';
 import PokedexPage from './components/PokedexPage';
 
+import { login } from './actions/pokemonActions';
+
 import './App.css';
 import { Link, Route, Switch } from 'react-router-dom'
 import {connect} from 'react-redux'
+import {useEffect} from 'react'
 
 function App(props) {
+  useEffect(() => {
+    const storedId = localStorage.getItem('userId');
+    if (storedId){
+      props.login(storedId)
+    }
+  }, [])
+
   return (
     <div className="App">
       <header>
@@ -41,4 +51,4 @@ function mapStateToProps (state){
   })
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {login})(App);

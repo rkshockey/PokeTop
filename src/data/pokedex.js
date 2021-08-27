@@ -30,6 +30,7 @@ export const initialPoke = {
     },
     eggGroup: null,
     levelSpeed: null,
+    gender: null,
     rarity: null,
     biomes: null,
     abilities: [{name: null, hidden: null}],
@@ -62,10 +63,11 @@ export const human = {
     pokedexEntry: "There is much debate about whether humans are, themselves, pokemon.",
     eggGroup: 'none',
     levelSpeed: slow,
+    gender: '1:1',
     biomes: null,
     rarity: null,
     abilities: [{name: null, hidden: null}],
-    moveList: [{name: null, level: null}],
+    moveList: [{name: 'blank', level: null}],
 }
 
 const pokedex = [
@@ -98,6 +100,7 @@ const pokedex = [
         pokedexEntry: "There is a plant seed on its back right from the day this Pokemon is born. The seed slowly grows larger.",
         eggGroup: 'Monster, Grass',
         levelSpeed: medslow,
+        gender: '9:1',
         biomes: null,
         rarity: null,
         abilities: [
@@ -174,6 +177,7 @@ const pokedex = [
         pokedexEntry: "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
         eggGroup: 'Monster, Dragon',
         levelSpeed: medslow,
+        gender: '9:1',
         biomes: null,
         rarity: null,
         abilities: [

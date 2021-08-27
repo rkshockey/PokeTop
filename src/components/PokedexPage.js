@@ -40,7 +40,7 @@ function PokedexPage (props){
         }
     }
 
-    return <div className='pokedex-page'>
+    return <div className={role === 'master' ? 'pokedex-page' : 'pokedex-page bottom-div'}>
         <div className='pokedex-top'>
             <div className='pokedex-pics'>
                 <img src={pokemon.picture.normal} alt={pokemon.species} />
@@ -86,6 +86,10 @@ function PokedexPage (props){
                     <h4>Level Speed</h4>
                     <p>{pokemon.levelSpeed}</p>
                 </div>
+                <div>
+                    <h4>Male : Female</h4>
+                    <p>{pokemon.gender}</p>
+                </div>
             </div>}
             <div className='row'>
                 {pokemon.abilities.map(item => ability(item))}
@@ -96,7 +100,7 @@ function PokedexPage (props){
             {role === 'master' && <div>
                 <h4>Attack List</h4>
                 <ContestForm view={view} setView={setView}/>
-                <div className='attacks'>
+                <div className='attacks bottom-div'>
                     {pokemon.moveList.map(item => <Attacks pokedex={true} move={item} role={role} view={view}/>)}
                 </div>
             </div>}

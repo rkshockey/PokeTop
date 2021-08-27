@@ -13,6 +13,7 @@ function Login (props) {
     function handleChange (e){
         setUser(e.target.value);
         props.login(e.target.value);
+        localStorage.setItem('userId', e.target.value)
     }
 
     return <div className='login-form'>
