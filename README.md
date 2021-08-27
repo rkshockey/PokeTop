@@ -1,6 +1,12 @@
 # PokeTop
 A program meant for a hybrid tabletop RPG/ video game for Pokemon.
 
+==========
+DEPLOYMENT
+==========
+
+Project is currently deployed at 'https://poke-top.vercel.app/'
+
 ============
 CURRENT BUGS
 ============
