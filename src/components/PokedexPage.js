@@ -4,7 +4,7 @@ import { useParams } from 'react-router'
 
 import pokedex, {human, initialPoke} from '../data/pokedex'
 import { sizeClass, ranges, movement } from '../equations'
-import { typeMatch, normal } from '../data/typechart'
+import { typeMatch } from '../data/typechart'
 import { ability } from '../data/abilitydex'
 
 import Attacks from './Attacks'
