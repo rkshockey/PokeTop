@@ -8,7 +8,7 @@ const users = [
         name: null,
         username: '--Select User--', 
         players: [],
-        character: null
+        trainers: []
     },
     {
         id: 1,
@@ -16,23 +16,23 @@ const users = [
         name: 'Romy',
         username: 'CatOrWall', 
         players: ['Alden', 'Zoey'],
-        character: null
+        trainers: []
     },
     {
         id: 2,
         role: player,
         name: 'Alden',
         username: 'ireofzues',
-        character: 'Alden',
-        players: null
+        trainers: ['Alden'],
+        players: []
     },
     {
         id: 3,
         role: player,
         name: 'Zoey',
         username: 'VelvetElixer',
-        character: 'Zoey',
-        players: null
+        trainers: ['Zoey'],
+        players: []
     }
 ]
 
