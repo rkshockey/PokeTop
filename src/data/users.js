@@ -15,8 +15,8 @@ const users = [
         role: master,
         name: 'Romy',
         username: 'CatOrWall', 
-        players: ['Alden', 'Zoey'],
-        trainers: []
+        players: ['Master', 'Alden', 'Zoey'],
+        trainers: ['Master']
     },
     {
         id: 2,
